@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project provides a pipeline for processing VCF files, specifically for analyzing and filtrating genetic variations. Originally created for analyzing three glioblastoma patients, this pipeline can be adapted for any disease and any number of patients. BAM files were analyzed using the  [Strelka pipeline] (https://github.com/Illumina/strelka/tree/v2.9.x) and annotated using the [Ensembl Variant Effect Predictor (VEP)] (https://www.ensembl.org/info/docs/tools/vep/index.html).
+This project provides a pipeline for processing VCF files, specifically for analyzing and filtrating genetic variations. Originally created for analyzing three glioblastoma patients, this pipeline can be adapted for any disease and any number of patients. BAM files were analyzed using the [Strelka pipeline](https://github.com/Illumina/strelka/tree/v2.9.x) and annotated using the [Ensembl Variant Effect Predictor (VEP)](https://www.ensembl.org/info/docs/tools/vep/index.html).
 
 ## Project Structure
 
