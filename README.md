@@ -18,6 +18,7 @@ Ensure you have the following tools installed:
 - bcftools
 - Snakemake
 - Python 3
+- Jupyter Notebook
 
 ## Usage
 
