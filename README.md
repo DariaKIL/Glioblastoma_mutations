@@ -1,4 +1,4 @@
-## WES Tumor Samples - VCF Filtering Pipeline
+## VCF Filtering Pipeline for tumor samples (WES) 
 
 ## Overview
 
