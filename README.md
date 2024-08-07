@@ -8,9 +8,9 @@ BAM files were analized through strelka pipeline https://github.com/Illumina/str
 
 ## Project Structure
 - Snakemake: file for managing the pipeline.
-- filtrating.ipynb
-- dag.pdf: illustration of this pipeline.
-- README.md: This file.
+- data_filtration.ipynb
+- dag.png: illustration of this pipeline.
+- README.md
 
 ## Prerequisites
 
