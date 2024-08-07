@@ -4,19 +4,7 @@
 
 This project provides a pipeline for processing VCF files, specifically for analyzing genetic variations and annotations. 
 This project was created for analizing three patients with glioblastoma, but it can be used for any disease and any numbers of patients.
-BUM files were analized through strelka pipeline https://github.com/Illumina/strelka/tree/v2.9.x and annotated through Ensembl Variant Effect Predictor (VEP) 
-
- ```sh
-    /usr/local/bin/configureStrelkaGermlineWorkflow.py \
-    --bam sample1_sample2_sample3/sample1.dedup.sorted.bam \
-    --bam sample1_sample2_sample3/sample2.dedup.sorted.bam \
-    --bam sample1_sample2_sample3/sample3.dedup.sorted.bam \
-    --referenceFasta /path/to/ref/Homo_sapiens.GRCh38.dna.primary_assembly.fa \
-    --runDir /path/to/dir/strelka2 \
-    --exome \
-    --ploidy /path/to/dir/gender.vcf.gz \
-    --callRegions /path/to/dir/targets38.bed.gz
-    ```
+BAM files were analized through strelka pipeline https://github.com/Illumina/strelka/tree/v2.9.x and annotated through Ensembl Variant Effect Predictor (VEP) 
 
 ## Project Structure
 - Snakemake: file for managing the pipeline.
