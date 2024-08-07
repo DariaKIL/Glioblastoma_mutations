@@ -3,4 +3,4 @@
 /output/
 /temp/
 /myenv/
-.snakemake/
+/.snakemake/
