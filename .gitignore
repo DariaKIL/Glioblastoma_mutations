@@ -1,0 +1,5 @@
+# Ignore data, output, temp directories
+/data/
+/output/
+/temp/
+/myenv/
