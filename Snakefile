@@ -3,11 +3,11 @@ import glob
 
 # Define the working directory
 work_dir = os.getcwd()
-#print("work_dir: ", work_dir)
+print("work_dir: ", work_dir)
 
 # Find all .anno.vcf.gz files in the data directory
 vcf_files = glob.glob(os.path.join(work_dir, 'data/*.anno.vcf.gz'))
-#print('VCF files:', vcf_files)
+print('VCF files:', vcf_files)
 
 # Extract sample names and create a dictionary mapping files to sample names
 samples_dict = {}
@@ -16,8 +16,8 @@ for vcf in vcf_files:
     for sample in samples:
         samples_dict[sample] = vcf
 sample_names = list(samples_dict.keys())
-#print('Sample names:', sample_names)
-#print('Samples dictionary:', samples_dict)
+print('Sample names:', sample_names)
+print('Samples dictionary:', samples_dict)
 
 rule all:
     input:

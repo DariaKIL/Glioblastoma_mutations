@@ -1,0 +1,192 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+fix_GERP_notation        3
+split_vcf                3
+to_tsv_main              3
+to_vcf_VEP               3
+total                   13
+
+Select jobs to execute...
+Execute 3 jobs...
+
+[Wed Aug  7 15:27:33 2024]
+localrule split_vcf:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/data/POU538_QZU677_OQL728.anno.vcf.gz
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677.vcf
+    jobid: 6
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677.vcf
+    wildcards: sample=QZU677
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+
+[Wed Aug  7 15:27:33 2024]
+localrule split_vcf:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/data/POU538_QZU677_OQL728.anno.vcf.gz
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538.vcf
+    jobid: 3
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538.vcf
+    wildcards: sample=POU538
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+
+[Wed Aug  7 15:27:33 2024]
+localrule split_vcf:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/data/POU538_QZU677_OQL728.anno.vcf.gz
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728.vcf
+    jobid: 9
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728.vcf
+    wildcards: sample=OQL728
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+[Wed Aug  7 15:27:36 2024]
+Finished job 9.
+1 of 13 steps (8%) done
+[Wed Aug  7 15:27:36 2024]
+Finished job 6.
+2 of 13 steps (15%) done
+[Wed Aug  7 15:27:36 2024]
+Finished job 3.
+3 of 13 steps (23%) done
+Select jobs to execute...
+Execute 3 jobs...
+
+[Wed Aug  7 15:27:36 2024]
+localrule fix_GERP_notation:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677_modified.vcf
+    jobid: 5
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677_modified.vcf; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677.vcf
+    wildcards: sample=QZU677
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+
+[Wed Aug  7 15:27:36 2024]
+localrule fix_GERP_notation:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538_modified.vcf
+    jobid: 2
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538_modified.vcf; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538.vcf
+    wildcards: sample=POU538
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+
+[Wed Aug  7 15:27:36 2024]
+localrule fix_GERP_notation:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728_modified.vcf
+    jobid: 8
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728_modified.vcf; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728.vcf
+    wildcards: sample=OQL728
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+[Wed Aug  7 15:27:47 2024]
+Finished job 2.
+4 of 13 steps (31%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Wed Aug  7 15:27:47 2024]
+localrule to_tsv_main:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538_modified.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/POU538.tsv
+    jobid: 1
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/POU538.tsv; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538_modified.vcf
+    wildcards: sample=POU538
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+
+[Wed Aug  7 15:27:47 2024]
+localrule to_vcf_VEP:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538_modified.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/POU538_vep.tsv
+    jobid: 10
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/POU538_vep.tsv; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/POU538_modified.vcf
+    wildcards: sample=POU538
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+[Wed Aug  7 15:27:47 2024]
+Finished job 5.
+5 of 13 steps (38%) done
+[Wed Aug  7 15:27:47 2024]
+Finished job 8.
+6 of 13 steps (46%) done
+Select jobs to execute...
+Execute 4 jobs...
+
+[Wed Aug  7 15:27:47 2024]
+localrule to_vcf_VEP:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728_modified.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/OQL728_vep.tsv
+    jobid: 12
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/OQL728_vep.tsv; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728_modified.vcf
+    wildcards: sample=OQL728
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+
+[Wed Aug  7 15:27:47 2024]
+localrule to_tsv_main:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677_modified.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/QZU677.tsv
+    jobid: 4
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/QZU677.tsv; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677_modified.vcf
+    wildcards: sample=QZU677
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+
+[Wed Aug  7 15:27:47 2024]
+localrule to_tsv_main:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728_modified.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/OQL728.tsv
+    jobid: 7
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/OQL728.tsv; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/OQL728_modified.vcf
+    wildcards: sample=OQL728
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+
+[Wed Aug  7 15:27:47 2024]
+localrule to_vcf_VEP:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677_modified.vcf
+    output: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/QZU677_vep.tsv
+    jobid: 11
+    reason: Missing output files: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/QZU677_vep.tsv; Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/temp/QZU677_modified.vcf
+    wildcards: sample=QZU677
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+[Wed Aug  7 15:27:53 2024]
+Finished job 7.
+7 of 13 steps (54%) done
+[Wed Aug  7 15:27:53 2024]
+Finished job 1.
+8 of 13 steps (62%) done
+[Wed Aug  7 15:27:53 2024]
+Finished job 4.
+9 of 13 steps (69%) done
+[Wed Aug  7 15:28:07 2024]
+Finished job 10.
+10 of 13 steps (77%) done
+[Wed Aug  7 15:28:07 2024]
+Finished job 12.
+11 of 13 steps (85%) done
+[Wed Aug  7 15:28:07 2024]
+Finished job 11.
+12 of 13 steps (92%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Aug  7 15:28:07 2024]
+localrule all:
+    input: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/POU538.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/QZU677.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/OQL728.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/POU538_vep.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/QZU677_vep.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/OQL728_vep.tsv
+    jobid: 0
+    reason: Input files updated by another job: /Users/dariakilina/GitHub/Glioblastoma_mutations/output/QZU677_vep.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/OQL728_vep.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/POU538.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/OQL728.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/POU538_vep.tsv, /Users/dariakilina/GitHub/Glioblastoma_mutations/output/QZU677.tsv
+    resources: tmpdir=/var/folders/q_/mx5m8r393bq5_rcy1wlmybsh0000gn/T
+
+[Wed Aug  7 15:28:07 2024]
+Finished job 0.
+13 of 13 steps (100%) done
+Complete log: .snakemake/log/2024-08-07T152733.024001.snakemake.log
