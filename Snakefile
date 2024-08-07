@@ -51,7 +51,7 @@ rule to_tsv_main:
         os.path.join(work_dir, 'output/{sample}.tsv')
     shell:
         """
-        bcftools view -i 'FILTER="PASS"' {input} | bcftools query -f '%CHROM %POS %ID %REF %ALT %QUAL [%GT %DP]\n' -s {wildcards.sample} > {output}
+        bcftools query -f '%CHROM %POS %ID %REF %ALT %QUAL %FILTER [%GT %DP]\n' -s {wildcards.sample} {input} > {output}
         """
 
 rule to_vcf_VEP:
