@@ -38,7 +38,7 @@ Ensure you have the following tools installed:
     cd /path/to/Glioblastoma_mutations
     ```
 
-4. Make sure your annotated VCF file (if it contains multiple samples) is named according to this type: **samplename1_samplename2.anno.vcf.** Run the Snakemake workflow to generate tables for each sample:
+4. Make sure your annotated VCF file (if it contains multiple samples) is named according to this type: **samplename1_samplename2.anno.vcf** Run the Snakemake workflow to generate tables for each sample:
     ```sh
     snakemake
     ```
