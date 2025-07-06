@@ -52,8 +52,8 @@ Run the Snakemake workflow designed for separate files:
     ```
 
 5. Filtering:
-	•	For filtering based on gnomAD v3, use data_filtration.ipynb.
-	•	For filtering based on gnomAD v4, use data_filtration_gnomADv4.ipynb.
+   - For filtering based on gnomAD v3, use data_filtration.ipynb.
+   - For filtering based on gnomAD v4, use data_filtration_gnomADv4.ipynb.
 
 Open the appropriate notebook in Jupyter and execute all cells to generate filtered tables for each sample. You can easily adjust the filtering criteria according to your analysis needs.
 
